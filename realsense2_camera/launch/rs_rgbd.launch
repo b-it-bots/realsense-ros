@@ -83,12 +83,12 @@ Processing enabled by this node:
   <!-- rgbd_launch specific arguments -->
 
   <!-- Arguments for remapping all device namespaces -->
-  <arg name="rgb"                             default="color" />
+  <arg name="rgb"                             default="rgb" />
   <arg name="ir"                              default="infra1" />
   <arg name="depth"                           default="depth" />
   <arg name="depth_registered_pub"            default="depth_registered" />
   <arg name="depth_registered"                default="depth_registered" unless="$(arg align_depth)" />
-  <arg name="depth_registered"                default="aligned_depth_to_color" if="$(arg align_depth)" />
+  <arg name="depth_registered"                default="aligned_depth_to_rgb" if="$(arg align_depth)" />
   <arg name="depth_registered_filtered"       default="$(arg depth_registered)" />
   <arg name="projector"                       default="projector" />
 
